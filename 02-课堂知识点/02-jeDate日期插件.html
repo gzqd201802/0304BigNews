@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 导入 jeDate 的样式 -->
+    <link rel="stylesheet" href="./libs/jedate/css/jedate.css">
+    <!-- 导入 jeDate 的JS -->
+    <script src="./libs/jedate/js/jedate.js"></script>
+</head>
+<body>
+    <!-- 准备一个 input 输入框，并添加 id 值 -->
+    <input type="text" id="myDate01">
+    <script>
+        //点击显示（YYYY年MM月DD日 hh:mm:ss）格式
+        jeDate("#myDate01",{
+            // !!是否初始化时间
+            isinitVal: true,
+            // !!弹出层的层级
+            zIndex:2099,
+            // !!日期格式
+            format: 'YYYY年MM月DD日 hh:mm:ss'
+        });
+    </script>
+</body>
+</html>
