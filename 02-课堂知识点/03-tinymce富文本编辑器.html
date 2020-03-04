@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 2.1 引入 tinymce.min.js -->
+    <script src="./libs/tinymce/tinymce.min.js"></script>
+    <script>
+        // 2.2 初始化 tinymce 富文本编辑器
+        tinymce.init({
+            // 选择器
+            selector: '#mytextarea',
+            // 高度
+            height:500,
+            // 语言
+            language: 'zh_CN',
+            // 对齐方式
+            directionality: 'ltr',      // left to right 左对齐
+            // 浏览器单词拼写
+            browser_spellcheck: true,
+            // 右键菜单
+            contextmenu: false,
+            // 插件
+            plugins: [
+                "advlist autolink lists link image charmap print preview anchor",
+                "searchreplace visualblocks code fullscreen",
+                "insertdatetime media table contextmenu paste imagetools wordcount",
+                "code"
+            ],
+            // 工具栏
+            toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | code",
+        });
+    </script>
+</head>
+
+<body>
+    <!-- 2.3 准备一个盒子，添加 id 属性 -->
+    <div id="mytextarea"></div>
+</body>
+
+</html>
